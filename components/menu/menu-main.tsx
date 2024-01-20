@@ -20,11 +20,11 @@ type index = number;
 function Menu() {
   const [currentMenuSelected, setCurrentMenuSelect] = useState<index>(0);
   const menuOptions = [
-    { label: "Dashboard", icon: <PieChartIcon />, route: "/dashboard" },
-    { label: "Catalog", icon: <LayersIcon />, route: "/dashboard" },
+    { label: "Dashboard", icon: <PieChartIcon />, route: "/dashboard/home" },
+    { label: "Catalog", icon: <LayersIcon />, route: "/dashboard/catalog" },
 
-    { label: "Members", icon: <PersonIcon />, route: "/dashboard" },
-    { label: "Reservations", icon: <ClipboardIcon />, route: "/dashboard" },
+    { label: "Members", icon: <PersonIcon />, route: "/dashboard/members" },
+    { label: "Reservations", icon: <ClipboardIcon />, route: "/dashboard/reserves" },
     {
       label: "Fines/Payments",
       icon: (
@@ -44,15 +44,15 @@ function Menu() {
           <path d="M18 12a2 2 0 0 0 0 4h4v-4Z" />
         </svg>
       ),
-      route: "/dashboard",
+      route: "/dashboard/payments",
     },
 
-    { label: "Settings", icon: <GearIcon />, route: "/dashboard" },
-    { label: "Notifications", icon: <BellIcon />, route: "/dashboard" },
+    { label: "Settings", icon: <GearIcon />, route: "/dashboard/settings" },
+    { label: "Notifications", icon: <BellIcon />, route: "/dashboard/notifications" },
   ];
 
   return (
-    <div className="w-[300px] h-full border-r flex flex-col justify-between ">
+    <div className="w-[300px] h-full border-r flex flex-col justify-between">
       <div>
         <div className="flex items-start justify-center border-b w-full p-4">
           <h2 className="text-2xl font-semibold">LibraFlow</h2>
